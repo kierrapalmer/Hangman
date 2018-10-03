@@ -20,7 +20,7 @@ def progress(list_a, list_b, guess):
                 letter_count += 1
 
         if letter_count > 0:
-            print("\033[92m Correct! The letter " + guess + " is in the word " + str(letter_count) + " times. \033[0m")
+            print(" Correct! The letter " + guess + " is in the word " + str(letter_count) + " times.")
             return list_b
 
 
@@ -140,7 +140,7 @@ while game:
         elif len(guess) == 1:
             list1 = progress(word, progress_list, guess)
             if list1 is None:
-                print("\033[91m Sorry! There are no " + guess + "'s in the word! \033[0m")
+                print(" Sorry! There are no " + guess + "'s in the word! ")
                 incorrect.append(guess)
                 lives -= 1
                 print_noose(lives)
